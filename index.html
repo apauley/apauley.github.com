@@ -32,14 +32,37 @@
 
 	<div id="contentContainer"><!-- Start main content wrapper -->
 		<div id="content"><!-- Start content -->
-			<table width="100%">
-<tr>
-  <td><a href="http://github.com/apauley" rel="self"><img class="imageStyle" alt="My Code" src="files/github.png" width="99" height="44"/></a></td>
-  <td><a href="http://twitter.com/apauley" rel="self"><img class="imageStyle" alt="Follow me on Twitter" src="files/twitter.png" width="56" height="39"/></a></td>
-  <td><a href="http://www.linkedin.com/in/apauley" rel="self"><img class="imageStyle" alt="View my LinkedIn profile" src="files/linkedin.png" width="41" height="41"/></a></td>
-  <td><a href="http://wikistudent.ws/Unisa/User:Andreas" rel="self"><img class="imageStyle" alt="My Unisa studies" src="files/wikistudent.png" width="51" height="45"/></a></td>
-</tr>
-</table>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 5,
+  interval: 6000,
+  width: 'auto',
+  height: 300,
+  theme: {
+    shell: {
+      background: '#333333',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#ffffff',
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  }
+}).render().setUser('apauley').start();
+</script>
+
 		</div><!-- End content -->
 		<div class="clearer"></div>
 		<div id="breadcrumbcontainer"><!-- Start the breadcrumb wrapper -->
@@ -53,8 +76,22 @@
 			<br style="clear: left;" />
 		</div><!-- End navigation --> 
 		<div id="sidebar"><!-- Start sidebar content -->
-			<h1 class="sideHeader"></h1><!-- Sidebar header -->
-			<!-- sidebar content you enter in the page inspector -->
+			<h1 class="sideHeader">Me on the Interwebs</h1><!-- Sidebar header -->
+			<table>
+<tr>
+  <td><a href="http://github.com/apauley" rel="self"><img class="imageStyle" alt="My Code" src="files/github.png" width="99" height="44"/></a></td>
+</tr>
+<tr>
+  <td><a href="http://twitter.com/apauley" rel="self"><img class="imageStyle" alt="Follow me on Twitter" src="files/twitter.png" width="56" height="39"/></a></td>
+</tr>
+<tr>
+  <td><a href="http://www.linkedin.com/in/apauley" rel="self"><img class="imageStyle" alt="View my LinkedIn profile" src="files/linkedin.png" width="41" height="41"/></a></td>
+</tr>
+<tr>
+  <td><a href="http://wikistudent.ws/Unisa/User:Andreas" rel="self"><img class="imageStyle" alt="My Unisa studies" src="files/wikistudent.png" width="51" height="45"/></a></td>
+</tr>
+</table>
+<!-- sidebar content you enter in the page inspector -->
 			 <!-- sidebar content such as the blog archive links -->
 		</div><!-- End sidebar content -->
 	</div><!-- End sidebar wrapper -->
